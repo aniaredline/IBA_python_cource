@@ -35,24 +35,23 @@ class ExportJSON:
 class ExDog(Dog, ExportJSON):
     def get_breed(self):
         return "Порода: {0} - {1}".format(self.name, self.breed)
-    
 
-issubclass(Dog, Pet)
 
-dog = ExDog("Джек", "Питбуль")
-dog2 = ExDog.from_str("Штрудель:Пудель")
-cat = Cat("Маркиз", "Сиам")
-dog3 = Dog.from_str("    Данте                :         Доберман         ")
+if __name__ == "__main__":
+    dog = ExDog("Джек", "Питбуль")
+    dog2 = ExDog.from_str("Штрудель:Пудель")
+    dog3 = Dog.from_str("    Данте                :         Доберман         ")
+    cat = Cat("Маркиз", "Сиам")
 
-print(dog.get_breed())
-print(dog.say())
-print("-----------------")
-print(dog2.get_breed())
-print(dog2.say())
-print("-----------------")
-print(dog3.get_breed())
-print(dog3.say())
-print("-----------------")
+    print(dog.get_breed())
+    print(dog.say())
+    print("")
+    print(dog2.get_breed())
+    print(dog2.say())
+    print("")
+    print(dog3.get_breed())
+    print(dog3.say())
+    print("")
 
-print(cat.get_breed())
-print(cat.say())
+    print(cat.get_breed())
+    print(cat.say())
